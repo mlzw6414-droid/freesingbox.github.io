@@ -158,24 +158,14 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
+    <div class="panel-heading"><h5>Shadowrocket 支持自动测速吗？</h5></div>
+    <div class="panel-body">
+        支持。Shadowrocket 可以批量测速节点延迟并标记最佳连接。用户还可设置自动切换到最低延迟节点，实现稳定高速的上网体验，尤其在网络波动较大的环境中效果明显。<hr />    </div>
+</div>
+<div class="panel panel-default">
     <div class="panel-heading"><h5>Hiddify Next 用户带宽限制如何配置？</h5></div>
     <div class="panel-body">
         管理员可为每个用户设置上传、下载和总流量上限，超出限制可自动降速或阻止访问。保证服务器资源合理分配，避免单用户占用过多带宽，提高整体公平性。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Sing-box 是否支持多出口自动选择？</h5></div>
-    <div class="panel-body">
-        支持。通过配置路由规则和策略组，Sing-box 可以自动判断流量类型并选择最佳出口，实现智能分流和多节点负载均衡，提高访问效率。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Sing-box 的 JSON 配置文件常见语法错误如何快速定位？</h5></div>
-    <div class="panel-body">
-        通过 JSON 校验工具或编辑器（例如 VSCode）打开配置文件，查看语法高亮与错误提示；也可运行 sing-box 并观察控制台错误信息，错误通常会指出第几行或哪个字段不合法以便修正。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Hiddify Next 的主要用途是什么？</h5></div>
-    <div class="panel-body">
-        Hiddify Next 是 Hiddify 系列的新版本，集成了 VLESS、Trojan、Reality 等新型协议支持。它为用户提供一站式代理配置与分享功能，适合初学者快速上手使用。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>V2Ray 使用 mKCP 有哪些适合场景？</h5></div>
@@ -183,14 +173,29 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
         mKCP 是基于 UDP 的传输协议，适合高丢包或不稳定网络环境。结合策略组使用，可优化网页浏览、视频播放和游戏体验，减少延迟和掉线，提高连接稳定性。<hr />    </div>
 </div>
 <div class="panel panel-default">
+    <div class="panel-heading"><h5>VMess 的加密方式如何选择？</h5></div>
+    <div class="panel-body">
+        VMess 支持自动加密和 AEAD 加密等多种方式。AEAD 加密更安全且抗重放攻击，适合高安全性需求的网络环境，而普通加密在性能上稍快，但安全性略低。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>如何安全地在服务器上部署 V2Ray（最小权限原则）？</h5></div>
+    <div class="panel-body">
+        使用独立非 root 用户运行 V2Ray，限制服务访问端口并仅开放必要端口；配置防火墙规则与 Fail2ban 限制暴力登录；定期更新内核与 V2Ray 版本，并关闭不必要的系统服务以减少攻击面。<hr />    </div>
+</div>
+<div class="panel panel-default">
     <div class="panel-heading"><h5>VMess 节点使用 AEAD 加密有何优势？</h5></div>
     <div class="panel-body">
         AEAD 加密能提供更强的安全性和抗重放能力，同时减少加密头泄露特征。相比普通加密，更适合高封锁环境，兼顾安全与性能，保证长期稳定使用。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>VMess 的加密方式如何选择？</h5></div>
+    <div class="panel-heading"><h5>Sing-box 的 JSON 配置文件常见语法错误如何快速定位？</h5></div>
     <div class="panel-body">
-        VMess 支持自动加密和 AEAD 加密等多种方式。AEAD 加密更安全且抗重放攻击，适合高安全性需求的网络环境，而普通加密在性能上稍快，但安全性略低。<hr />    </div>
+        通过 JSON 校验工具或编辑器（例如 VSCode）打开配置文件，查看语法高亮与错误提示；也可运行 sing-box 并观察控制台错误信息，错误通常会指出第几行或哪个字段不合法以便修正。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Sing-box 是否支持多出口自动选择？</h5></div>
+    <div class="panel-body">
+        支持。通过配置路由规则和策略组，Sing-box 可以自动判断流量类型并选择最佳出口，实现智能分流和多节点负载均衡，提高访问效率。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>PassWall2 自动切换节点机制如何工作？</h5></div>
@@ -198,14 +203,9 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
         PassWall2 会根据节点延迟和丢包率测试结果，结合策略组自动选择最优节点处理流量。无需用户手动切换，保证网页、视频和游戏流量的速度和稳定性，优化网络体验。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Shadowrocket 支持自动测速吗？</h5></div>
+    <div class="panel-heading"><h5>Hiddify Next 的主要用途是什么？</h5></div>
     <div class="panel-body">
-        支持。Shadowrocket 可以批量测速节点延迟并标记最佳连接。用户还可设置自动切换到最低延迟节点，实现稳定高速的上网体验，尤其在网络波动较大的环境中效果明显。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>如何安全地在服务器上部署 V2Ray（最小权限原则）？</h5></div>
-    <div class="panel-body">
-        使用独立非 root 用户运行 V2Ray，限制服务访问端口并仅开放必要端口；配置防火墙规则与 Fail2ban 限制暴力登录；定期更新内核与 V2Ray 版本，并关闭不必要的系统服务以减少攻击面。    </div>
+        Hiddify Next 是 Hiddify 系列的新版本，集成了 VLESS、Trojan、Reality 等新型协议支持。它为用户提供一站式代理配置与分享功能，适合初学者快速上手使用。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -253,16 +253,16 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2026-9-6-node-share.htm" title="「9月6日」最高速度22.5M/S，2025年Singbox每天更新免费机场订阅节点链接">「9月6日」最高速度22.5M/S，2025年Singbox每天更新免费机场订阅节点链接</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-high-speed-nodes-2026-8-9.htm" title="「8月9日」最高速度20.1M/S，2025年Singbox每天更新免费机场订阅节点链接">「8月9日」最高速度20.1M/S，2025年Singbox每天更新免费机场订阅节点链接</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-16-free-subscribe-node.htm" title="「8月16日」最高速度18.2M/S，2025年Singbox每天更新免费机场订阅节点链接">「8月16日」最高速度18.2M/S，2025年Singbox每天更新免费机场订阅节点链接</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/2026-9-4-node-share.htm" title="「9月4日」最高速度19.7M/S，2025年Singbox每天更新免费机场订阅节点链接">「9月4日」最高速度19.7M/S，2025年Singbox每天更新免费机场订阅节点链接</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/free-node-subscribe-links-2026-8-11.htm" title="「8月11日」最高速度22.2M/S，2025年Singbox每天更新免费机场订阅节点链接">「8月11日」最高速度22.2M/S，2025年Singbox每天更新免费机场订阅节点链接</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-22-free-node-subscribe.htm" title="「8月22日」最高速度21.6M/S，2025年Singbox每天更新免费机场订阅节点链接">「8月22日」最高速度21.6M/S，2025年Singbox每天更新免费机场订阅节点链接</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/sing-box-node-share-2026-8-21.htm" title="「8月21日」最高速度18.2M/S，2025年Singbox每天更新免费机场订阅节点链接">「8月21日」最高速度18.2M/S，2025年Singbox每天更新免费机场订阅节点链接</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-10-free-sing-box-node.htm" title="「8月10日」最高速度21.9M/S，2025年Singbox每天更新免费机场订阅节点链接">「8月10日」最高速度21.9M/S，2025年Singbox每天更新免费机场订阅节点链接</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-8-free-subscribe-node.htm" title="「9月8日」最高速度19.7M/S，2025年Singbox每天更新免费机场订阅节点链接">「9月8日」最高速度19.7M/S，2025年Singbox每天更新免费机场订阅节点链接</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-24-sing-box-node.htm" title="「8月24日」最高速度20M/S，2025年Singbox每天更新免费机场订阅节点链接">「8月24日」最高速度20M/S，2025年Singbox每天更新免费机场订阅节点链接</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/2026-8-28-today-sing-box-node.htm" title="「8月28日」最高速度20.4M/S，2025年Singbox每天更新免费机场订阅节点链接">「8月28日」最高速度20.4M/S，2025年Singbox每天更新免费机场订阅节点链接</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/sing-box-node-share-2026-8-21.htm" title="「8月21日」最高速度18.2M/S，2025年Singbox每天更新免费机场订阅节点链接">「8月21日」最高速度18.2M/S，2025年Singbox每天更新免费机场订阅节点链接</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/2026-8-20-free-sing-box-node.htm" title="「8月20日」最高速度20.9M/S，2025年Singbox每天更新免费机场订阅节点链接">「8月20日」最高速度20.9M/S，2025年Singbox每天更新免费机场订阅节点链接</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/free-high-speed-nodes-2026-8-15.htm" title="「8月15日」最高速度19M/S，2025年Singbox每天更新免费机场订阅节点链接">「8月15日」最高速度19M/S，2025年Singbox每天更新免费机场订阅节点链接</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/node-share-links-2026-8-31.htm" title="「8月31日」最高速度18.4M/S，2025年Singbox每天更新免费机场订阅节点链接">「8月31日」最高速度18.4M/S，2025年Singbox每天更新免费机场订阅节点链接</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/sing-box-node-share-2026-8-23.htm" title="「8月23日」最高速度18.2M/S，2025年Singbox每天更新免费机场订阅节点链接">「8月23日」最高速度18.2M/S，2025年Singbox每天更新免费机场订阅节点链接</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/sing-box-node-share-2026-8-19.htm" title="「8月19日」最高速度18.5M/S，2025年Singbox每天更新免费机场订阅节点链接">「8月19日」最高速度18.5M/S，2025年Singbox每天更新免费机场订阅节点链接</a><hr /></li>
                     </ul>
     </div>
 </div>
@@ -274,7 +274,7 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">9</span> <a href="/date/2026-09/" title="2026-09 归档">2026-09</a></h4>
+                <h4><span class="badge" style="float: right;">16</span> <a href="/date/2026-09/" title="2026-09 归档">2026-09</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">26</span> <a href="/date/2026-08/" title="2026-08 归档">2026-08</a></h4>
